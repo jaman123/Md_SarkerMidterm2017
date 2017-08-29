@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo{
+public  class EmployeeInfo extends EmployeeAbstract implements Employee {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -19,8 +19,16 @@ public class EmployeeInfo{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
-	/*
+
+	private int employeeId;
+    private int employeeAge;
+	private String employeeName;
+    private String department;
+	private double salary;
+	private int performance;
+
+
+/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
@@ -31,10 +39,22 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		this.employeeId = employeeId;
 		
 	}
     public EmployeeInfo(String name, int employeeId){
+		this.employeeName = name;
+		this.employeeId = employeeId;
 		
+	}
+
+	public EmployeeInfo(int employeeId,int employeeAge,String department,double salary,int performande){
+    	this.employeeId = employeeId;
+    	this.employeeAge = employeeAge;
+    	this.employeeName = employeeName;
+    	this.department = department;
+    	this.salary = salary;
+    	this.performance = performande;
 	}
 	
 	/*
@@ -45,8 +65,33 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(){
-		int total=0;
+	public static double calculateEmployeeBonus(double salary,int performance){
+		double total=0;
+		if(performance == 5){
+			total = salary * .10;
+		}
+		else if (performance == 4)
+        {
+            total = salary * .08;
+        }
+        else if (performance == 3)
+        {
+			total = salary * .06;
+		}
+		else if (performance == 2)
+		{
+			total = salary * .04;
+		}
+		else if (performance == 1)
+		{
+			total = salary * .02;
+		}
+		else
+        {
+			total = 0;
+		}
+		System.out.println("Total employee bonus: $ " + total);
+
 		return total;
 	}
 	
@@ -68,10 +113,131 @@ public class EmployeeInfo{
 
         //implement numbers of year from above two dates
 		//Calculate pension
+        String startYear = convertedJoiningDate.substring(convertedJoiningDate.length()-4,convertedJoiningDate.length());
+        String currentYear= convertedTodaysDate.substring(convertedTodaysDate.length()-4,convertedTodaysDate.length());
+
+       int start = Integer.parseInt(startYear);
+       int current = Integer.parseInt(currentYear);
+
+       int numOfYears = current - start;
+
+       if(numOfYears >=5){
+           total = salary * .25;
+       }
+       else if (numOfYears==4){
+           total = salary * .20;
+       }
+       else if(numOfYears ==3){
+           total = slary * .15;
+       }
+       else if(numOfYears ==2){
+           total = salary * .10;
+       }
+       else if(numOfYears ==1){
+           total = salary * .05;
+       }
+       else
+       {
+           total = 0;
+       }
+        System.out.println("Total employee pension: $ ");
+
 
 		return total;
 	}
-	private static class DateConversion {
+
+    @Override
+    public int employeeId() {
+        return employeeId;
+    }
+
+    @Override
+    public String employeeName() {
+        return employeeName;
+    }
+
+    @Override
+    public void assignDepartment() {
+        System.out.println("Your department");
+
+    }
+
+    @Override
+    public double calculateSalary() {
+        return 7000;
+    }
+
+    @Override
+    public void benefitLayout() {
+        System.out.println("What is your benefil :");
+
+    }
+
+    @Override
+    public void EmployeeHistory() {
+        System.out.println("Employee Hiatory");
+
+    }
+    //--------------------------------------------------
+    // Generate getter and setter
+    public static String getCompanyName() {
+        return companyName;
+    }
+
+    public static void setCompanyName(String companyName) {
+        EmployeeInfo.companyName = companyName;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public int getEmployeeAge() {
+        return employeeAge;
+    }
+
+    public void setEmployeeAge(int employeeAge) {
+        this.employeeAge = employeeAge;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public int getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(int performance) {
+        this.performance = performance;
+    }
+
+
+    private static class DateConversion {
 
 		public DateConversion(Months months){}
 		public static String convertDate(String date) {

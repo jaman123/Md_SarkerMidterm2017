@@ -1,14 +1,73 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+A: To arrange and process the data in the memory for efficient storage, access and processing.
 What are the various operations that can be performed on different Data Structures?
+Following operations can be performed on the data structures:
+
+1. Traversing
+
+2. Searching
+
+3. Inserting
+
+4. Deleting
+
+5. Sorting
+
+6. Merging
+
+1. Traversing- It is used to access each data item exactly once so that it can be processed.
+
+2. Searching- It is used to find out the location of the data item if it exists in the given collection of data items.
+
+3. Inserting- It is used to add a new data item in the given collection of data items.
+
+4. Deleting- It is used to delete an existing data item from the given collection of data items.
+
+5. Sorting- It is used to arrange the data items in some order i.e. in ascending or descending order in case of numerical data and in dictionary order in case of alphanumeric data.
+
+6. Merging- It is used to combine the data items of two sorted files into single file in the sorted form.
 List out the areas in which data structures are applied extensively?
+A:The name of areas are:
+
+  ? Compiler Design,
+
+  ? Operating System,
+
+  ? Database Management System,
+
+  ? Statistical analysis package,
+
+  ? Numerical Analysis,
+
+  ? Graphics,
+
+  ? Artificial Intelligence,
+
+  ? Simulation
 what is an Array?
+A:An array is a container object that holds a fixed number of values of a single type.
 what is the difference between the Array and ArrayList?
+A:Difference between array and arraylist in java include eight points namely Resizable, Performance, Traversal ,
+Primitives , Length , Type-Safety, Adding elements , Multi-dimensional. 1. Resizable : Array is static in size that is
+ fixed length data structure, One can not change the length after creating the Array object.
 what is LinkedList?
+A: A linked list is a linear data structure where each element is a separate object. Each element (we will call it
+a node) of a list is comprising of two items - the data and a reference to the next node. The last node has a reference
+ to null. The entry point into a linked list is called the head of the list.
 How is an Array different from Linked List?
+A: In array, each element is independent, no connection with previous element or with its location. In Linked list,
+location or address of elements is stored in the link part of previous element/node. In array, no pointers are used like
+ linked list so no need of extra space in memory for pointer.
 what is queue?
+A: Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends.
+ One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows
+ First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
 what is stack?
+A: A stack is a data structure that allows data to be inserted (a 'push' operation), and removed (a 'pop' operation).
+ Many stacks also support a read ahead (a 'peek' operation), which reads data without removing it.
+ A stack is a LIFO-queue, meaning that the last data to be inserted will be the first data to be removed.
 what is FIFO and LIFO?
 what is the order of complexity?
 what is the best case to search an element from an array?
