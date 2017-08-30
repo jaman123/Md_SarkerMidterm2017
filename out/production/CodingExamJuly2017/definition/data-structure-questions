@@ -69,6 +69,8 @@ A: A stack is a data structure that allows data to be inserted (a 'push' operati
  Many stacks also support a read ahead (a 'peek' operation), which reads data without removing it.
  A stack is a LIFO-queue, meaning that the last data to be inserted will be the first data to be removed.
 what is FIFO and LIFO?
+A: FIFO stands for First In First Out,
+   LIFO stands for Last In First Out
 what is the order of complexity?
 what is the best case to search an element from an array?
 what is the worst case to search an element from an array?
@@ -82,6 +84,7 @@ What are the different ways of copying an array into another array?
 What is difference between an array and a linked list?
 What is DFS and BFS?
 What is Recursion?
+A: Recursion is basically a Method that calls itself in its own Method.
 What are linear and non linear data Structures?
 What is Big-(O)-notation?
 Outlined different kind of sorting algorithm with time complexity?

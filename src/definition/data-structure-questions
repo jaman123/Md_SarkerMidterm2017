@@ -22,7 +22,7 @@ Following operations can be performed on the data structures:
 2. Searching- It is used to find out the location of the data item if it exists in the given collection of data items.
 
 3. Inserting- It is used to add a new data item in the given collection of data items.
- 
+
 4. Deleting- It is used to delete an existing data item from the given collection of data items.
 
 5. Sorting- It is used to arrange the data items in some order i.e. in ascending or descending order in case of numerical data and in dictionary order in case of alphanumeric data.
