@@ -46,7 +46,7 @@ public class ProcessStudentInfo {
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
 				
-				List<Student> seleniumStudents = new ArrayList<Student>();
+		   		List<Student> seleniumStudents = new ArrayList<Student>();
 				List<Student> qtpStudents = new ArrayList<Student>();
 				
 				//Create XMLReader object.

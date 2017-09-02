@@ -101,8 +101,9 @@ public  class EmployeeInfo extends EmployeeAbstract implements Employee {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
-		int total=0;
+	public static double calculateEmployeePension(){
+		double total=0;
+		double salary =0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
 		String joiningDate = sc.nextLine();
@@ -116,20 +117,20 @@ public  class EmployeeInfo extends EmployeeAbstract implements Employee {
         String startYear = convertedJoiningDate.substring(convertedJoiningDate.length()-4,convertedJoiningDate.length());
         String currentYear= convertedTodaysDate.substring(convertedTodaysDate.length()-4,convertedTodaysDate.length());
 
-       int start = Integer.parseInt(startYear);
-       int current = Integer.parseInt(currentYear);
+       	int start = Integer.parseInt(startYear);
+       	int current = Integer.parseInt(currentYear);
 
-       int numOfYears = current - start;
+       	int numOfYears = current - start;
 
-       if(numOfYears >=5){
+       	if(numOfYears >=5){
            total = salary * .25;
-       }
-       else if (numOfYears==4){
+       	}
+       	else if (numOfYears==4){
            total = salary * .20;
-       }
-       else if(numOfYears ==3){
-           total = slary * .15;
-       }
+       	}
+       	else if(numOfYears ==3){
+           total = salary * .15;
+       	}
        else if(numOfYears ==2){
            total = salary * .10;
        }
@@ -163,7 +164,7 @@ public  class EmployeeInfo extends EmployeeAbstract implements Employee {
     }
 
     @Override
-    public double calculateSalary() {
+    public int calculateSalary() {
         return 7000;
     }
 

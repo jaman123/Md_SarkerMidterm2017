@@ -15,10 +15,12 @@ public class FortuneEmployee {
 	public static void main(String[] args) {
 
 		EmployeeInfo employeeOne = new EmployeeInfo(1);
-		EmployeeInfo employeeTwo = new EmployeeInfo("John",3);
-		EmployeeInfo employeeThree = new EmployeeInfo(2,60,"Tester",10000,4);
+		EmployeeInfo employeeTwo = new EmployeeInfo("John", 3);
+		EmployeeInfo employeeThree = new EmployeeInfo(2, 60, "Tester", 10000, 4);
 
 		employeeOne.benefitLayout();
 		employeeOne.assignDepartment();
-		employeeOne.employeeHistory();
-	    EmployeeInfo.calculateEmployeePension(employeeThree.getSalary());
+		//employeeOne.employeeHistory();
+		//EmployeeInfo.calculateEmployeePension(employeeThree.getSalary());
+	}
+}
